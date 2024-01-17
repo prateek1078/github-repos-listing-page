@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>GitHub Repositories</title>
+</head>
+<body>
+
+    <div class="container">
+        <h1>GitHub Repositories</h1>
+
+        <label for="username">Enter GitHub Username:</label>
+        <input type="text" id="username" placeholder="e.g., johnpapa">
+
+        <button onclick="getRepositories()">Get Repositories</button>
+
+        <div id="loader" class="loader"></div>
+
+        <a id="profileLink" href="#" target="_blank">
+            <div id="profile" class="profile-info">
+                <img id="profilePhoto" alt="GitHub Profile Photo">
+                <div id="profileDetails">
+                    <div id="profileName"></div>
+                    <div id="bio"></div>
+                </div>
+            </div>
+        </a>
+
+        <div id="repositories" class="repos-container"></div>
+
+        <div id="pagination" class="pagination">
+            <button onclick="prevPage()" id="prevBtn" disabled>Previous</button>
+            <span id="currentPage">Page 1</span>
+            <button onclick="nextPage()" id="nextBtn" disabled>Next</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
